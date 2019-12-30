@@ -341,6 +341,7 @@ module.exports = function (app) {
                     }
                 });
                 let eventDate=ownerEmail1.date.getTime();
+        		let sendName = ownerEmail1.childName;
                 let ownerEmail = ownerEmail1.created_by;
                 let ownerTokens = await db.collection(`users`).findOne({email: ownerEmail});
                 let ownerObject = ownerTokens;
@@ -431,11 +432,13 @@ module.exports = function (app) {
                         success: true,
                         chooseGifts: true,
                         gifts,
+            			sendName,
                         date:eventDate,
                         response_id: ins.insertedId.toString()
                     });
                 } else {
                     response.json({
+			            sendName,
                         date:eventDate,
                         success: true
                     });
