@@ -1,0 +1,18 @@
+/*
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+var today = mm + '/' + dd + '/' + yyyy;
+console.log(process.cwd());
+console.log = function () {
+    try {
+        tempLog.call(0, ...arguments);
+    } catch (e) {
+    }
+    try {
+        fs.appendFileSync(`LOG.log`,util.format.apply(null, arguments) + '\n',{flags:'as+'});
+    } catch (e) {
+    }
+}
+*/
